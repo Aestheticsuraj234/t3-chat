@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { currentUser } from "@/modules/authentication/actions";
 import UserButton from "@/modules/authentication/components/user-button";
+import ChatMessageView from "@/modules/chat/components/chat-message-view";
 import { Divide } from "lucide-react";
 import Image from "next/image";
 
@@ -9,8 +10,6 @@ const user = await currentUser()
 
 
   return (
- <div className="flex flex-col items-center justify-center h-screen">
-  <UserButton user={user}/>
- </div>
+    <ChatMessageView user={user}/>
   );
 }
