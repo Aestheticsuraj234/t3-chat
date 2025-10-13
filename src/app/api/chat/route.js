@@ -110,7 +110,7 @@ export async function POST(req) {
                 content: userPartsJSON,
                 messageRole: MessageRole.USER,
                 model,
-                MessageType: MessageType.NORMAL,
+                messageType: MessageType.NORMAL,
               });
             }
           }
@@ -123,7 +123,7 @@ export async function POST(req) {
               content: assistantPartsJSON,
               messageRole: MessageRole.ASSISTANT,
               model,
-              messageType: "NORMAL",
+              messageType: MessageType.NORMAL,
             });
           }
 
